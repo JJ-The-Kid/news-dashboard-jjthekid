@@ -1,0 +1,30 @@
+{{> head }}
+    <body>
+        {{> navigation }}
+        <main>
+            <h1>{{ heading }}</h1>
+
+            {{#if loginFailed}}
+            <p class="warning">
+                Login Failed! Please try again!
+            </p>
+            {{/if}}
+            
+            <div class="content-panel">
+                <form method="post" action="/login">
+                    <p>
+                        <label class="form-label" for="username">Login</label>
+                        <input type="text" id="username" name="username" value="{{ username }}">
+                    </p>
+                    <p>
+                        <label class="form-label" for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                    </p>
+                    <p>
+                        <input type="submit" value="Login">
+                    </p>
+                </form> 
+            </div>
+        </main>
+    </body>
+</html>
