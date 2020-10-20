@@ -1,1 +1,8 @@
-PORT=3000
+NEWS_API_KEY=insertKeyHere
+PORT=insertPortHere
+SESSION_SECRET=insertSessionSecretHere
+
+MYSQL_HOST=insertHostHere
+MYSQL_USER=insertUserHere
+MYSQL_PASSWORD=insertPasswordHere
+MYSQL_DATABASE=insertDatabaseHere
