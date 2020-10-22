@@ -1,5 +1,4 @@
-const 
-    router = require('express').Router(),
+const router = require('express').Router(),
     newsController = require('../controllers/newsController'),
     settingsController = require('../controllers/settingsController'),
     loginController = require('../controllers/loginController'),
