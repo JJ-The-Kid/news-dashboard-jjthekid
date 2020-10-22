@@ -1,5 +1,3 @@
-const apiKeyCheck = require('../middleware/apiKeyCheck');
-
 const router = require('express').Router(),
     newsController = require('../controllers/newsController'),
     settingsController = require('../controllers/settingsController'),
