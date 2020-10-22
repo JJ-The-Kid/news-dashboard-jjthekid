@@ -1,9 +1,12 @@
+const apiKeyCheck = require('../middleware/apiKeyCheck');
+
 const router = require('express').Router(),
     newsController = require('../controllers/newsController'),
     settingsController = require('../controllers/settingsController'),
     loginController = require('../controllers/loginController'),
     userController = require('../controllers/userController'),
-    authMiddleware = require('../middleware/authMiddleware');
+    authMiddleware = require('../middleware/authMiddleware'),
+    apiKeyCheck = require('../middleware/apiKeyCheck');
 
 router.get('/', newsController.renderHome);
 router.get('/home', newsController.renderHome);
@@ -17,10 +20,10 @@ router.post('/login', loginController.submitLogin);
 
 router.get('/logout', loginController.logout);
 
-router.post('/user', userController.create);
-router.get('/user/:id', userController.getById);
-router.get('/user', userController.getAll);
-router.delete('/user/:id', userController.deleteById);
-router.patch('/user', userController.update);
+router.post('/user', apiKeyCheck, userController.create);
+router.get('/user/:id', apiKeyCheck, userController.getById);
+router.get('/user', apiKeyCheck, userController.getAll);
+router.delete('/user/:id', apiKeyCheck, userController.deleteById);
+router.patch('/user', apiKeyCheck, userController.update);
 
 module.exports = router;
