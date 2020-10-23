@@ -3,31 +3,42 @@ body {
 }
 
 nav {
-    padding-bottom: 2em;
+    padding-bottom: 1em;
 }
 
 .navigation li {
     float: left;
-    margin-right: 2em;
+    margin-right: 1em;
     list-style: none;
 }
 
 .nav-link {
-    padding: 5px 10px;
+    padding: 10px 20px;
     font-weight: bold;
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    background-color: #4488ff;
-    border-radius: 3px;
+    background-color: #1d3a68;
+    border-radius: 50px;
 }
 
 .nav-link.active, 
 .nav-link.active:hover {
-    background-color: #ffaa44;
+    background-color: #155715;
 }
 
 .nav-link:hover {
-    background-color: #5599ff;
+    background-color: #0e2241;
+}
+
+.user-info {
+    float: right;
+    background-color: #eee;
+    color: black;
+    font-weight: bold;
+    padding: 1px;
+    border: 1px solid black;
+    height: fit-content;
+    width: fit-content;
 }
 
 .warning {
