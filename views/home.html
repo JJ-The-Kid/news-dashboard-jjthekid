@@ -10,11 +10,11 @@
             </p>
             {{/if}}
 
-            <ol>
+            <ul class="articleList">
                 {{#each articles}}
-                <li><a href="{{ url }}" target="_blank">{{ title }}</a></li>
+                <li class="articleListElement"><a class="articleLink" href="{{ url }}" target="_blank">{{ title }}</a></li>
                 {{/each}}
-            </ol>
+            </ul>
         </main>
     </body>
 </html>

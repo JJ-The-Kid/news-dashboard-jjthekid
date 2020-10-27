@@ -1,15 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 2em;
 }
 
 nav {
-    padding-bottom: 1em;
+    margin: 2em auto;
 }
 
+/*
 .navigation li {
     float: left;
     margin-right: 1em;
     list-style: none;
+}
+*/
+
+.navigation li{
+    display: inline;
 }
 
 .nav-link {
@@ -31,14 +44,18 @@ nav {
 }
 
 .user-info {
-    float: right;
     background-color: #eee;
     color: black;
     font-weight: bold;
-    padding: 1px;
+    padding: 10px;
     border: 1px solid black;
-    height: fit-content;
     width: fit-content;
+    margin: 2em auto;
+    border-radius: 50px;
+}
+
+body h1 {
+    margin: 1em auto;
 }
 
 .warning {
@@ -71,4 +88,40 @@ nav {
 
 fieldset {
     border: none;
+}
+
+.articleList {
+    list-style: none;
+    text-align: center;
+    margin: 1em auto;
+
+    background-color: #eee;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+    width: fit-content;
+    border-radius: 20px;
+}
+
+.articleListElement {
+    padding: 5px;
+    border: 1px solid black;;
+    margin: 5px 0;
+    background-color: #1d3a68;
+    color: white;
+    border-radius: 50px;
+    pointer-events: none;
+}
+
+.articleListElement:hover {
+    background-color: #0e2241;
+}
+
+.articleListElement > a {
+    pointer-events: auto;
+}
+
+.articleLink  {
+    text-decoration: none;
+    color: white;
 }
