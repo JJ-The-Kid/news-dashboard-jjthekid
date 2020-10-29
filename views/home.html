@@ -1,20 +1,27 @@
 {{> head }}
     <body>
-        {{> navigation }}
-        <main>
-            <h1>{{ heading }}</h1>
 
-            {{#if message}}
+        <header id="main-header">
+            <div class="container">
+                <h1>News Dashboard JJTheKid</h1>
+            </div>
+        </header>
+
+        {{> navigation }}
+
+        {{#if message}}
+            <div class="container">
             <p class="warning">
                 {{ message }}
             </p>
-            {{/if}}
+            </div>
+        {{/if}}
+            
+        <ul class="articleList">
+            {{#each articles}}
+            <li class="articleListElement"><a class="articleLink" href="{{ url }}" target="_blank">{{ title }}</a></li>
+            {{/each}}
+        </ul>
 
-            <ul class="articleList">
-                {{#each articles}}
-                <li class="articleListElement"><a class="articleLink" href="{{ url }}" target="_blank">{{ title }}</a></li>
-                {{/each}}
-            </ul>
-        </main>
     </body>
 </html>

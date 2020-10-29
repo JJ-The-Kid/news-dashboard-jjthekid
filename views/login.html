@@ -1,8 +1,15 @@
 {{> head }}
     <body>
+
+        <header id="main-header">
+            <div class="container">
+                <h1>News Dashboard JJTheKid</h1>
+            </div>
+        </header>
+
         {{> navigation }}
+
         <main>
-            <h1>{{ heading }}</h1>
 
             {{#if loginFailed}}
             <p class="warning">

@@ -1,16 +1,20 @@
-<nav>
-    <ul class="navigation">
-        <li><a href="/home" class="nav-link {{#if homeActive}}active{{/if}}">Home</a></li>
-        {{#if isLoggedIn}}
-        <li><a href="/settings" class="nav-link {{#if settingsActive}}active{{/if}}">Settings</a></li>
-        <li><a href="/logout" class="nav-link">Logout</a></li>
-        {{else}}
-        <li><a href="/login" class="nav-link {{#if loginActive}}active{{/if}}">Login</a></li>
-        {{/if}}
-    </ul>
-    {{#if isLoggedIn}}
-    <p class="user-info">
-        Eingeloggt als {{ user.firstname }} {{ user.lastname }}
-    </p>
-    {{/if}}
+<nav id="navbar">
+    <div class="container">
+        <div id="navbox">
+            <div id="navigation">
+                <a href="/home" class="nav-link {{#if homeActive}}active{{/if}}">Home</a>
+                {{#if isLoggedIn}}
+                <a href="/settings" class="nav-link {{#if settingsActive}}active{{/if}}">Settings</a>
+                <a href="/logout" class="nav-link">Logout</a>
+                {{else}}
+                <a href="/login" class="nav-link {{#if loginActive}}active{{/if}}">Login</a>
+                {{/if}}
+            </div>
+            {{#if isLoggedIn}}
+            <div class="user-info">
+                Eingeloggt als {{ user.firstname }} {{ user.lastname }}
+            </div>
+            {{/if}}
+        </div>
+    </div>
 </nav>
