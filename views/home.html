@@ -1,27 +1,41 @@
 {{> head }}
     <body>
 
-        <header id="main-header">
-            <div class="container">
-                <h1>News Dashboard JJTheKid</h1>
-            </div>
-        </header>
+        <div id="head-and-body">
 
-        {{> navigation }}
+            <div id="fixed-head">
 
-        {{#if message}}
-            <div class="container">
-            <p class="warning">
-                {{ message }}
-            </p>
+                <header id="main-header">
+                    <div class="container">
+                        <h1>News Dashboard JJTheKid</h1>
+                    </div>
+                </header>
+                
+                {{> navigation }}
+
             </div>
-        {{/if}}
-            
-        <ul class="articleList">
-            {{#each articles}}
-            <li class="articleListElement"><a class="articleLink" href="{{ url }}" target="_blank">{{ title }}</a></li>
-            {{/each}}
-        </ul>
+
+            {{#if message}}
+                <div class="warning">
+                    <div class="container">
+                        {{ message }}
+                    </div>
+                </div>
+            {{/if}}
+                
+            <div class="container">
+                <div id="articleBox">
+                    {{#each articles}}
+                    <a class="articleLink" href="{{ url }}" target="_blank">{{ title }}</a>
+                    {{/each}}
+                </div>
+            </div>
+
+        </div>    
+
+        <footer id="main-footer">
+            <p>Copyright &copy; 2020 News Dashboard JJTheKid</p>
+        </footer>
 
     </body>
 </html>

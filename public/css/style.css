@@ -5,12 +5,16 @@
 }
 
 body {
-    background-color:#f4f4f4;
-	color:#555;
+    background-color:#d4d4d4;
+	color:black;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:16px;
-	line-height:1.6em;
-	margin:0;
+    line-height:1.6em;
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between
 }
 
 .container {
@@ -19,11 +23,17 @@ body {
     overflow:hidden;
 }
 
+#fixed-head {
+    position: sticky;
+    top: 0;
+}
+
 #main-header{
+    position: sticky;
 	background-color:rgb(25, 60, 25);
     color:#fff;
     border-bottom: 2px solid black;
-    padding: 2em 0 2em 0;
+    padding: 1.5em 0;
 }
 
 #navbar{
@@ -51,9 +61,8 @@ body {
     color:#fff;
 	text-decoration: none;
     font-size:18px;
-    padding: 12px 40px;
+    padding: 6px 40px;
     border-left: 2px solid black;
-    flex: 1;
 }
 
 .nav-link:last-child{
@@ -76,7 +85,7 @@ body {
     background-color:rgb(173, 81, 38);
     color:white;
     font-size:18px;
-    padding: 12px 40px;
+    padding: 6px 40px;
     border-left: 2px solid black;
     border-right: 2px solid black;
 }
@@ -103,20 +112,140 @@ body {
     color: #cc0000;
     font-weight: bold;
     padding: 1em;
-    border: 1px solid #ddbb66;
+    border: 2px solid #ddbb66;
 }
 
+
+#articleBox {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    border: 2px solid black;
+}
+
+.articleLink  {
+    text-decoration: none;
+    color: white;
+    padding: 6px;
+    border: 1px solid black;;
+    background-color: #1e3e5c;
+}
+
+.articleLink:hover {
+    background-color: #1d354b;
+}
+
+#main-footer{
+	background: #333;
+	color:#fff;
+	text-align: center;
+	padding:20px;
+}
+
+.form-box {
+    width: fit-content;
+    background: #fff;
+    border: 2px solid black;
+    border-radius: 3px;
+    margin: 2em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-left: 18px;
+    padding-top: 10px;
+}
+
+#news-api-category,
+input[type=text],
+input[type=password] {
+    color: #777;
+    padding-left: 10px;
+    margin: 10px;
+    margin-top: 12px;
+    margin-left: 18px;
+    margin-right: 18px;
+    width: 290px;
+    height: 35px;
+	border: 1px solid #c7d0d2;
+    border-radius: 3px;
+    box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #f5f7f8;
+    }
+
+#news-api-key {
+    width: 475px;
+}
+
+#news-api-category {
+    width: auto;
+}
+    
+input[type=text]:hover,
+input[type=password]:hover {
+    border: 1px solid #b6bfc0;
+    box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .7), 0 0 0 5px #f5f7f8;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    border: 1px solid #a8c9e4;
+    box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #e6f2f9;
+}
+
+input[type=submit] {
+    float: right;
+    margin: 20px;
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(25, 60, 25); 
+    border-radius: 3px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: rgb(40, 90, 40); 
+}
+
+select option {
+    margin: 40px;
+    background: #333;
+    color: white;
+}
+
+select option:hover {
+    background: rgb(25, 60, 25);
+}
+
+/*
 .content-panel {
     padding: 1em;
     background-color: #eee;
     border: 1px solid black;
     border-radius: 2px;
+    margin: 1em 0;
 }
 
-/* Forms */
+.content-panel input[type=submit] {
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(25, 60, 25); 
+    border-radius: 30px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
 .form-label {
     display: inline-block;
-    width: 7em;
+    width: 10em;
 }
 
 .text-input {
@@ -129,45 +258,7 @@ body {
 fieldset {
     border: none;
 }
-
-.articleList {
-    list-style: none;
-    text-align: center;
-    margin: 1em auto;
-    
-    background-color: #eee;
-    color: black;
-    padding: 10px;
-    border: 1px solid black;
-    width: fit-content;
-    border-radius: 20px;
-}
-
-.articleListElement {
-    padding: 5px;
-    border: 1px solid black;;
-    margin: 5px 0;
-    background-color: #1d3a68;
-    color: white;
-    border-radius: 50px;
-    pointer-events: none;
-}
-
-.articleListElement:hover {
-    background-color: #0e2241;
-}
-
-.articleListElement > a {
-    pointer-events: auto;
-}
-
-.articleLink  {
-    text-decoration: none;
-    color: white;
-}
-
-
-
+*/
 
 /*
 .navigation li {

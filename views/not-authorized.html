@@ -1,22 +1,35 @@
 {{> head }}
     <body>
 
-        <header id="main-header">
-            <div class="container">
-                <h1>News Dashboard JJTheKid</h1>
+        <div id="head-and-body">
+
+            <div id="fixed-head">
+
+                <header id="main-header">
+                    <div class="container">
+                        <h1>News Dashboard JJTheKid</h1>
+                    </div>
+                </header>
+                
+                {{> navigation }}
+
             </div>
-        </header>
+            
+            <main>
+                <h1>Not authorized</h1>
 
-        {{> navigation }}
-        
-        <main>
-            <h1>Not authorized</h1>
+                <p class="warning">
+                    You are not authorized to view this page.
+                    Please log in first.
+                </p>
 
-            <p class="warning">
-                You are not authorized to view this page.
-                Please log in first.
-            </p>
+            </main>
 
-        </main>
+        </div>    
+
+        <footer id="main-footer">
+            <p>Copyright &copy; 2020 News Dashboard JJTheKid</p>
+        </footer>
+
     </body>
 </html>

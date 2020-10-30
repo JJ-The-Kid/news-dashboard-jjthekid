@@ -1,37 +1,69 @@
 {{> head }}
     <body>
 
-        <header id="main-header">
-            <div class="container">
-                <h1>News Dashboard JJTheKid</h1>
+        <div id="head-and-body">
+
+            <div id="fixed-head">
+
+                <header id="main-header">
+                    <div class="container">
+                        <h1>News Dashboard JJTheKid</h1>
+                    </div>
+                </header>
+                
+                {{> navigation }}
+
             </div>
-        </header>
 
-        {{> navigation }}
+            <main>
 
-        <main>
+                {{#if loginFailed}}
+                <div class="warning">
+                    <div class="container">
+                        Login Failed! Please try again!
+                    </div>
+                </div>
+                {{/if}}
+                
+                <div class="container">
 
-            {{#if loginFailed}}
-            <p class="warning">
-                Login Failed! Please try again!
-            </p>
-            {{/if}}
-            
-            <div class="content-panel">
-                <form method="post" action="/login">
-                    <p>
-                        <label class="form-label" for="username">Login</label>
-                        <input type="text" id="username" name="username" value="{{ username }}">
-                    </p>
-                    <p>
-                        <label class="form-label" for="password">Password</label>
-                        <input type="password" id="password" name="password">
-                    </p>
-                    <p>
-                        <input type="submit" value="Login">
-                    </p>
-                </form> 
-            </div>
-        </main>
+                    <form method="post" action="/login">
+                        <div class="form-box">
+
+                                <label class="form-label" for="username">Username:</label>
+                                <input type="text" id="username" name="username" value="{{ username }}">
+                                
+                                <label class="form-label" for="password">Password:</label>
+                                <input type="password" id="password" name="password">
+                
+                                <input type="submit" value="Login">
+
+                        </div>
+                    </form>
+    <!--
+                    <div class="content-panel">
+                        <form method="post" action="/login">
+                            <p>
+                                <label class="form-label" for="username">Login</label>
+                                <input type="text" id="username" name="username" value="{{ username }}">
+                            </p>
+                            <p>
+                                <label class="form-label" for="password">Password</label>
+                                <input type="password" id="password" name="password">
+                            </p>
+                            <p>
+                                <input type="submit" value="Login">
+                            </p>
+                        </form> 
+                    </div>
+    -->
+            </main>
+
+        </div>
+
+        <footer id="main-footer">
+            <p>Copyright &copy; 2020 News Dashboard JJTheKid</p>
+        </footer>
+
     </body>
 </html>
