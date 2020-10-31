@@ -32,13 +32,13 @@ body {
     position: sticky;
 	background-color:rgb(25, 60, 25);
     color:#fff;
-    border-bottom: 2px solid black;
     padding: 1.5em 0;
 }
 
 #navbar{
 	background-color:#333;
     color:#fff;
+    border-top: 2px solid black;
     border-bottom: 2px solid black;
     display: flex;
     flex-direction: row;
@@ -139,7 +139,9 @@ body {
 	background: #333;
 	color:#fff;
 	text-align: center;
-	padding:20px;
+    padding:20px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 .form-box {
